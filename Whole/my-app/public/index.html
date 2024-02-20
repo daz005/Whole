@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+        body {
+            background: linear-gradient(to right, rgb(50, 50, 193), rgb(193, 50, 50)); /* Gradient background from blue to red */
+            color: #000; /* Black text color */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .title-large {
+            font-size: 2em; /* Large font size for 'Whole' */
+            font-weight: bold;
+        }
+
+        .title-small {
+            font-size: 0.8em; /* Smaller font size for 'by Nicole Yue and Derek Zhu' */
+            font-style: italic;
+        }
+
+        .animation-placeholder {
+            width: 50px;
+            height: 50px;
+            background-color: #b31414; /* Light blue background for the circle */
+            border-radius: 50%; /* Makes the div a circle */
+            animation: slideIn 5s infinite alternate;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-10%); }
+            to { transform: translateX(1400%); }
+        }
+
+        .animation-placeholder2 {
+            width: 50px;
+            height: 50px;
+            background-color: #463fce; /* Light blue background for the circle */
+            border-radius: 50%; /* Makes the div a circle */
+            animation: slideIn2 5s infinite alternate;
+        }
+
+        @keyframes slideIn2 {
+            from { transform: translateX(2850%); }
+            to { transform: translateX(1400%); }
+        }
+
+        button.interactive {
+            background-color: #4CAF50; /* Green background for the button */
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+        }
+
+    </style>
+    <title>Whole: Humanities & Tech Talks</title>
+</head>
+<body>
+
+<nav class="container-fluid">
+    <ul>
+        <li><strong class="title-large">Whole</strong></li>
+    </ul>
+    <ul>
+        <li class="title-small">Nicole Yue & Derek Zhu</li>
+        <li><a href="episodes.html">Episodes</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#subscribe" role="button">Subscribe</a></li>
+    </ul>
+</nav>
+
+<main class="container">
+    <div class="grid">
+        <section>
+            <hgroup>
+                <h2>Welcome to Whole</h2>
+                <h3>Exploring the Intersection of Humanities and Technology</h3>
+            </hgroup>
+            <p>Join us as we delve into thought-provoking discussions at the crossroads of human culture and technological innovation.</p>
+            <figure>
+                <img src="https://i.pinimg.com/564x/de/f8/d7/def8d74b6c9271be2e5fd78fe48e05ec.jpg" alt="Whole Talks" />
+                <!-- <figcaption><a href="https://www.pinterest.com/pin/400187116902262353/" target="_blank">Image Source</a></figcaption> -->
+            </figure>
+            <h3>Featured Episodes</h3>
+            <p>Discover our most popular talks that challenge perspectives and inspire new ideas.</p>
+            <h3>About Whole</h3>
+            <p>Learn more about our mission to bridge the gap between technology and the humanities, fostering a deeper understanding of our digital world.</p>
+            <button class="interactive" onclick="alert('Thank you for your interest! More exciting content coming soon!')">Click for a Surprise!</button>
+        </section>
+    </div>
+</main>
+
+<div class="animation-placeholder"></div> <!-- Updated animation placeholder -->
+<div class="animation-placeholder2"></div> <!-- Updated animation placeholder -->
+
+<section aria-label="Subscribe example">
+    <div class="container">
+        <article>
+            <hgroup>
+                <h2>Get Notified</h2>
+                <h3>Subscribe to Our Channel</h3>
+            </hgroup>
+            <form class="grid">
+                <input type="text" id="firstname" name="firstname" placeholder="Your Name" aria-label="Your Name" required />
+                <input type="email" id="email" name="email" placeholder="Your Email" aria-label="Your Email" required />
+                <button type="submit" onclick="event.preventDefault()">Subscribe</button>
+            </form>
+        </article>
+    </div>
+</section>
+
+<footer class="container">
+    <small>
+        <a href="#privacy">Privacy Policy</a> • <a href="#terms">Terms & Conditions</a>
+    </small>
+</footer>
+
+</body>
+</html>
